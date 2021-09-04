@@ -1,0 +1,2 @@
+# newsifier-resizer-image-func
+
