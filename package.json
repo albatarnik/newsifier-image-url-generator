@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "browser": "dist/resize.js",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "rollup": "rollup -c"
+    "build": "npm run clean && tsc",
+    "clean": "del ./dist/*"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.0.1",
+    "del-cli": "^4.0.1",
     "jest": "^27.1.0",
     "rollup": "^2.56.3",
     "rollup-plugin-babel-minify": "^10.0.0",
