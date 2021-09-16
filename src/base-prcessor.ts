@@ -2,17 +2,22 @@ export abstract class BasePrcessor
 {
     static IMGPROXY = "imgproxy";
     static IMGIX = "imgix";
-     
+    static W = "w";
+    static H = "h";
+    static CROP = "crop";
+    static FIT = "fit";
+    static AR = "ar";
+    static WATERMARk = "watermark";
   
     static functionsMap()
     {
         let res = {};
-        res["w"] = "width";
-        res["h"] = "height";
-        res["crop"] = "crop";
-        res["fit"] = "fit";
-        res["ar"] = "ar";
-        res["watermark"] = "watermark";
+        res[ BasePrcessor.W ] = "width";
+        res[ BasePrcessor.H ] = "height";
+        res[ BasePrcessor.CROP ] = "crop";
+        res[ BasePrcessor.FIT ] = "fit";
+        res[ BasePrcessor.AR ] = "ar";
+        res[ BasePrcessor.WATERMARk ] = "watermark";
         return res;
     }
     protected url:string;
@@ -28,9 +33,14 @@ export abstract class BasePrcessor
         this.parsed = false
         this.render_options = render_options
         if(!this.url) throw 'Invalid url';
-        this.prepareUrl();
+        this.prepareUrl();  
+        this.prepareOptions();
+        
     }
+    prepareOptions()
+    {
 
+    }
     abstract prepareUrl();
     
     width(val)
