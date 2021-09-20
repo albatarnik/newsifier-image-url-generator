@@ -21,6 +21,8 @@ export abstract class BasePrcessor
         return res;
     }
     protected url:string;
+    protected origin:string;
+    protected readyUrl:string;
     protected host:string;
     protected parsed:boolean;
     protected render_options:any;
@@ -29,18 +31,19 @@ export abstract class BasePrcessor
     constructor(url, host , render_options)
     {
         this.url = url
+        this.origin = url
         this.host = host
         this.parsed = false
         this.render_options = render_options
         if(!this.url) throw 'Invalid url';
         this.prepareUrl();  
         this.prepareOptions();
+        this.checkReadyUrl();
         
     }
-    prepareOptions()
-    {
-
-    }
+    checkReadyUrl(){}
+    prepareOptions(){}
+   
     abstract prepareUrl();
     
     width(val)
@@ -69,6 +72,7 @@ export abstract class BasePrcessor
     }
     getParsedUrl()
     {
+        if(  this.readyUrl )  return this.readyUrl;
         if(  this.parsed )  return this.url;
         this.url += this.render_options && Object.keys(this.render_options).length > 0 ? '?' : '';
 

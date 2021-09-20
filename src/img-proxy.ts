@@ -7,10 +7,19 @@ export class ImgProxy extends BasePrcessor
     {
         let template = "{domain}/{sign}/resizing_type:fill/{watermark}/{width}/{height}/plain/{url}";
         template = template.replace("{domain}",this.host);
-        template = template.replace("{sign}","insecure");
+        template = template.replace("{sign}","Acbs8526SDKI");
         template = template.replace("{url}",this.url);
 
         this.url = template
+    }
+    checkReadyUrl()
+    {
+    
+        if( this.origin && this.origin.includes('.gif') ) 
+        {
+       
+            this.readyUrl = this.origin;
+        }
     }
 
     prepareOptions()
