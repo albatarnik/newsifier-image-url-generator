@@ -57,6 +57,8 @@ export class ImgProxy extends BasePrcessor
     }
     watermark(val)
     {
+        if( val )
+            val = encodeURIComponent(val)
         let to = val ? "/watermark:"+val: "";
         this.url = this.url.replace("/{watermark}",to);
     }
