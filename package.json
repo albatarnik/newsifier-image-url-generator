@@ -1,79 +1,33 @@
 {
-  
   "name": "newsifier-image-url-generator",
-  
   "version": "1.0.10",
-  
   "browser": "dist/resize.js",
-  
   "description": "",
-  
   "main": "./dist/index.js",
-  
   "types": "./dist/index.d.ts",
-  
   "files": [
-  
-    
-  "dist/**/*"
-  
+    "dist/**/*"
   ],
-  
   "repository": {
-  
-    
-  "type": "git",
-  
-    
-  "url": "https://github.com/albatarnik/newsifier-image-url-generator.git"
-  
+    "type": "git",
+    "url": "https://github.com/albatarnik/newsifier-image-url-generator.git"
   },
-  
   "scripts": {
-  
-    
-  "test": "echo \"Error: no test specified\" && exit 1",
-  
-    
-  "build": "npm run clean && tsc",
-  
-    
-  "clean": "del ./dist/*"
-  
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && tsc",
+    "clean": "del ./dist/*"
   },
-  
   "author": "",
-  
   "license": "ISC",
-  
   "devDependencies": {
-  
-    
-  "@types/jest": "^27.0.1",
-  
-    
-  "del-cli": "^4.0.1",
-  
-    
-  "jest": "^27.1.0",
-  
-    
-  "rollup": "^2.56.3",
-  
-    
-  "rollup-plugin-babel-minify": "^10.0.0",
-  
-    
-  "rollup-plugin-commonjs": "^10.1.0",
-  
-    
-  "rollup-plugin-node-resolve": "^5.2.0",
-  
-    
-  "ts-jest": "^27.0.5",
-  
-    
-  "typescript": "^4.4.2"
-  
+    "@types/jest": "^27.0.1",
+    "del-cli": "^4.0.1",
+    "jest": "^27.1.0",
+    "rollup": "^2.56.3",
+    "rollup-plugin-babel-minify": "^10.0.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
   }
 }
