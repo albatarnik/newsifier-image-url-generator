@@ -12,15 +12,7 @@ export class ImgProxy extends BasePrcessor
 
         this.url = template
     }
-    checkReadyUrl()
-    {
     
-        if( this.origin && this.origin.includes('.gif') ) 
-        {
-       
-            this.readyUrl = this.origin;
-        }
-    }
 
     prepareOptions()
     {
