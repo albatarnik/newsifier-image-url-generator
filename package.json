@@ -1,6 +1,6 @@
 {
   "name": "newsifier-image-url-generator",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "browser": "dist/resize.js",
   "description": "",
   "main": "./dist/index.js",
