@@ -1,5 +1,4 @@
 import { BasePrcessor } from "./base-prcessor";
-import * as url from 'url';
 
 export class Imagix extends BasePrcessor
 {
@@ -7,8 +6,8 @@ export class Imagix extends BasePrcessor
     
     prepareUrl()
     {
-        const { protocol, host, port } = url.parse(this.url);
-        this.url = this.url.replace(host,this.host);
+       // const { protocol, host, port } = url.parse(this.url);
+       // this.url = this.url.replace(host,this.host);
     }
 
     width(val)
