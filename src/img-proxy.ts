@@ -12,9 +12,9 @@ export class ImgProxy extends BasePrcessor {
   }
 
   checkReadyUrl(): void {
-    if (!this.url.endsWith("@webp")) {
-      this.url = this.url + "@webp";
-    }
+    // if (!this.url.endsWith("@webp")) {
+    //   this.url = this.url + "@webp";
+    // }
   }
 
   prepareOptions() {
